@@ -1,4 +1,4 @@
-*, *:before, *:after {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -46,18 +46,14 @@
     top: 1px;
   }
   
-  .content-wrapper {
-    line-height: 1.4;
-    margin: 0 auto;
-    max-width: 900px;
-    padding: 30px 25px;
-  }
-  
   /*
    * HEADER
    */
   
   .header {
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 900px;
     align-items: center;
     background-color: #EFEFEF;
     background-image: url('media.jpg');
