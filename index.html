@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My portfolio site - Simcare</title>
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/3833e38d1b.css"
+      crossorigin="anonymous"
+    />
     <script
       src="https://kit.fontawesome.com/3833e38d1b.js"
       crossorigin="anonymous"
@@ -16,22 +21,128 @@
       <div class="logo">
         <img src="./images/logo.png" />
       </div>
-      <ul class="menu">
-        <div class="menu-item">
-          <li data-key="about me" class="menu-link">About Me</li>
-          <span></span>
-        </div>
-        <div class="menu-item">
-          <li data-key="projects" class="menu-link">Projects</li>
-          <span></span>
-        </div>
-        <div class="menu-item">
-          <li data-key="contact" class="menu-link">Contact</li>
-          <span></span>
-        </div>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <div class="menu-item" id="aboutme-button">
+            <li data-key="about me" class="menu-link">About Me</li>
+            <span></span>
+          </div>
+          <div class="menu-item" id="projects-button">
+            <li data-key="projects" class="menu-link">Projects</li>
+            <span></span>
+          </div>
+          <div class="menu-item" id="contact-button">
+            <li data-key="contact" class="menu-link">Contact</li>
+            <span></span>
+          </div>
+        </ul>
+      </nav>
       <button class="burger"><span></span><span></span><span></span></button>
     </header>
-    <script src="./main.js"></script>
+    <main>
+      <article id="aboutme-article" style="margin-bottom: 0px">
+        <div class="article_text">
+          <h2>About Me</h2>
+          <p>
+            &emsp;My name is Mathew but friends call me "Handyman". Rumor has it
+            that there is nothing I wouldn't do.<br />
+            &emsp;A desire for stability and an interest in web technologies
+            pushed me to learn web development. I already have a lot of
+            knowledge in JavaScript ES6, CSS3 and HTML5. I am enthusiastic about
+            the React library. I intend to develop good programming practices by
+            writing in TypeScript and testing code.<br />
+            &emsp; You can see a little fragment of my skills on this page.
+            Enjoy!
+          </p>
+          <button class="button" id="cv-button">Show CV</button>
+        </div>
+        <figure class="aboutme-image"></figure>
+      </article>
+
+      <article style="border: none"><div id="cv-image"></div></article>
+      
+      <article id="projects-article">
+        <div class="article_text">
+          <h2>Projects</h2>
+          <p>
+            &emsp;My name is Mathew but friends call me "Handyman". Rumor has it
+            that there is nothing I wouldn't do.<br />
+            &emsp;A desire for stability and an interest in web technologies
+            pushed me to learn web development. I already have a lot of
+            knowledge in JavaScript ES6, CSS3 and HTML5. I am enthusiastic about
+            the React library. I intend to develop good programming practices by
+            writing in TypeScript and testing code.<br />
+            &emsp; You can see a fragment of my skills on this page. Enjoy!
+            <div class="project-element-stack">
+            <i class="fa-brands fa-square-js"></i
+            ><i class="fa-brands fa-css3-alt"></i
+            ><i class="fa-brands fa-html5"></i
+            ><i class="fa-brands fa-react"></i>
+          </div>
+          </p>
+        </div>
+        <figure class="projects-image"></figure>
+      </article>
+
+      <article class="project-element">
+        <a href="https://woodagram-42477.web.app">
+        <h3>Woodagram - furniture store</h3>
+          <div class="project-element-image woodagram"></div>
+          </a>
+      </article>
+
+      <article class="project-element">
+        <a href="https://zamiasto.info.pl">
+        <h3>Zamiasto - tourism portal</h3>
+          <div class="project-element-image zamiasto"></div>
+          </a>
+      </article>
+
+       <article class="project-element">
+        <a href="https://pocket-to-do.web.app/">
+        <h3>TODO - tasks list</h3>
+          <div class="project-element-image todo"></div>
+          </a>
+      </article>
+
+      <article class="project-element">
+        <a href="https://github.com/spoojler">
+        <h3>More...</h3>
+          <div class="project-element-image github"></div>
+          </a>
+      </article>
+
+      <article id="contact-article">
+        <div class="article_text">
+          <h2>Contact</h2>
+          <div class="contact-element">
+            <i class="fa-solid fa-phone"></i>
+            <p class="semi-hidden-text">Included in CV</p>
+          </div>
+          <div class="contact-element">
+            <i class="fa-solid fa-envelope"></i>
+            <p>
+              <a href="mailto:inz.mateuszwojcik@gmail.com"
+                >inz.mateuszwojcik@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="contact-element">
+            <i class="fa-brands fa-linkedin"></i>
+            <p>
+              <a href="https://linkedin.com/in/simcare">linkedin.com/simcare</a>
+            </p>
+          </div>
+          <div class="contact-element">
+            <i class="fa-brands fa-github"></i>
+            <p>
+              <a href="https://github.com/spoojler">github.com/spoojler</a>
+            </p>
+          </div>
+        </div>
+        <figure class="contact-image"></figure>
+      </article>
+    </main>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>

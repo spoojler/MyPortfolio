@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Pangolin&family=Prata&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@100&display=swap');
 
 * {
   padding: 0;
@@ -7,9 +7,18 @@
   font-family: 'Raleway', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 body {
-  font-size: 10px;
   overflow-x: hidden !important;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 :root {
@@ -23,20 +32,25 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 }
 .logo {
   display: block;
 }
 .logo img {
-  width: 250px;
+  width: 180px;
   height: auto;
-  margin: 25px;
+  margin: 15px 15px 15px 20px;
 }
 .menu {
   display: flex;
   height: 100vh;
   width: 100vw;
   position: absolute;
+  left: 0;
   background: var(--main);
   color: whitesmoke;
   font-size: 2.5rem;
@@ -49,7 +63,7 @@ header {
 
 .menu-item span {
   width: 12rem;
-  height: 0.1rem;
+  height: 2px;
   display: block;
   margin: 6px auto;
   border-radius: 30%;
@@ -62,6 +76,164 @@ header {
   );
 }
 
+nav {
+  z-index: 99;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+  border: 3px solid rgba(136, 0, 255, 0.155);
+  margin: 10px 0px 50px 0px;
+}
+.article_text {
+  margin: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-align: center;
+}
+p {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 2.5rem;
+  padding: 10px;
+}
+
+button {
+  background-color: #130e68e2;
+  border: 3px solid rgba(19, 14, 104, 0.888);
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 50%;
+  align-self: center;
+  cursor: pointer;
+}
+
+.project-element a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.project-element:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 34px 16px rgba(19, 14, 104, 0.3);
+}
+
+.project-element-stack {
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.project-element-image {
+  background-color: rgba(136, 0, 255, 0.155);
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project-element-image.woodagram {
+  background-image: url(./images/woodagram-thumbnail.png);
+}
+
+.project-element-image.zamiasto {
+  background-image: url(./images/zamiasto-thumbnail.png);
+  width: 250px;
+  height: 250px;
+  margin: 25px;
+}
+
+.project-element-image.todo {
+  background-image: url(./images/todo_thumbnail.png);
+  background-size: contain;
+  background-color: white;
+}
+
+.project-element-image.github {
+  background-image: url('./images/githumb-thumbnail.png');
+  opacity: 0.9;
+}
+
+.contact-element {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.semi-hidden-text {
+  opacity: 0.6;
+}
+.aboutme-image {
+  background-color: rgba(136, 0, 255, 0.155);
+  height: 400px;
+  width: 100%;
+  opacity: 0.9;
+  background-image: url('images/about_us.jpg');
+  background-size: cover;
+  background-position: left;
+}
+
+.projects-image {
+  background-color: rgba(136, 0, 255, 0.155);
+  height: 400px;
+  width: 100%;
+  background-image: url('images/working-on-computer.jpg');
+  opacity: 0.8;
+  background-size: cover;
+  background-position: left;
+}
+
+.contact-image {
+  background-color: rgba(136, 0, 255, 0.155);
+  height: 400px;
+  width: 100%;
+  background-image: url('images/calling-man.jpg');
+  opacity: 0.8;
+  background-size: cover;
+  background-position: center;
+}
+#cv-image.active {
+  background-color: white;
+  background-image: url('images/CV_Mateusz_Wójcik.jpg');
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  justify-self: center;
+}
 .menu.active {
   transform: translateX(0);
 }
@@ -76,20 +248,20 @@ header {
 
 .burger {
   height: 3rem;
-  width: 3rem;
+  width: 3.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border: none;
   background: transparent;
-  margin: 25px 25px;
+  margin: 10px 15px;
   align-items: flex-end;
 }
 .burger span {
   width: 100%;
-  height: 0.3rem;
+  height: 0.2rem;
   background-color: #3080e2d8;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   transition: all 0.3s ease-out;
 }
 
@@ -100,18 +272,82 @@ header {
   width: 60%;
 }
 .burger.active {
-  z-index: 10;
+  z-index: 100;
 }
 .burger.active > span {
   background: whitesmoke;
 }
 .burger.active > span:nth-child(1) {
-  transform: rotate(45deg) translateX(12px);
+  transform: rotate(45deg) translateX(7px);
 }
 .burger.active > span:nth-child(2) {
-  transform: rotate(-45deg) translateX(10px);
+  transform: rotate(-45deg) translateX(7px);
   width: 100%;
 }
 .burger.active > span:nth-child(3) {
   opacity: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  header {
+    display: flex;
+  }
+
+  nav {
+    width: 70%;
+  }
+
+  article {
+    flex-direction: row;
+  }
+
+  .menu {
+    display: flex;
+    color: var(--main);
+    position: unset;
+    margin-left: auto;
+    background: inherit;
+    flex-direction: row;
+    transform: translateX(0);
+    font-size: 1.5rem;
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+    justify-content: space-around;
+  }
+
+  .menu-item {
+    width: 250px;
+  }
+
+  .menu-item span {
+    background: black;
+    width: 0;
+  }
+
+  .menu-item:hover span {
+    width: 150px;
+  }
+  .menu-item span .menu-item:hover > span {
+    width: 0;
+    background: yellow;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .project-element a {
+    width: 1000px;
+    flex-direction: row;
+    justify-content: space-around;
+    /* gap: 50px; */
+  }
+  .project-element-image {
+    width: 400px;
+  }
+
+  #cv-image.active {
+    height: 1062px;
+  }
 }
