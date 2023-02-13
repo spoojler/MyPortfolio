@@ -1,7 +1,3 @@
-import { initializeApp } from 'firebase/app';
-
-const app = initializeApp();
-
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 
@@ -19,7 +15,6 @@ const cvButton = document.getElementById('cv-button');
 const cvImage = document.getElementById('cv-image');
 
 const aboutMeButton = document.getElementById('aboutme-button');
-const aboutMeArticle = document.getElementById('aboutme-article');
 
 const projectsButton = document.getElementById('projects-button');
 const projectsArticle = document.getElementById('projects-article');
