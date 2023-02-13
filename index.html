@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My portfolio site - Simcare</title>
+    <title>Portfolio website - Simcare Mateusz Wójcik</title>
+    <meta name="description" content="I am early stage programmer, looking for new challenges. On this website You can see my projects and contact with me. Mateusz Wójcik">
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -19,7 +20,7 @@
   <body>
     <header>
       <div class="logo">
-        <img src="./images/logo.png" />
+        <img src="./images/logo.png" alt="Logo of simcare company"/>
       </div>
       <nav>
         <ul class="menu">
@@ -44,8 +45,8 @@
         <div class="article_text">
           <h2>About Me</h2>
           <p>
-            &emsp;My name is Mathew but friends call me "Handyman". Rumor has it
-            that there is nothing I wouldn't do.<br />
+            &emsp;My name is Mathew but everyone who knows me calls me "Handyman". Rumor has it
+            that there is nothing I wouldn't do. In my free time, I love to cook and create furniture from wood.<br />
             &emsp;A desire for stability and an interest in web technologies
             pushed me to learn web development. I already have a lot of
             knowledge in JavaScript ES6, CSS3 and HTML5. I am enthusiastic about
@@ -56,7 +57,7 @@
           </p>
           <button class="button" id="cv-button">Show CV</button>
         </div>
-        <figure class="aboutme-image"></figure>
+        <figure class="aboutme-image" role="img" aria-label="Man reading business newspaper"></figure>
       </article>
 
       <article style="border: none"><div id="cv-image"></div></article>
@@ -65,14 +66,10 @@
         <div class="article_text">
           <h2>Projects</h2>
           <p>
-            &emsp;My name is Mathew but friends call me "Handyman". Rumor has it
-            that there is nothing I wouldn't do.<br />
-            &emsp;A desire for stability and an interest in web technologies
-            pushed me to learn web development. I already have a lot of
-            knowledge in JavaScript ES6, CSS3 and HTML5. I am enthusiastic about
-            the React library. I intend to develop good programming practices by
-            writing in TypeScript and testing code.<br />
-            &emsp; You can see a fragment of my skills on this page. Enjoy!
+            &emsp;I started my adventure with web technologies by using CMS platforms such as Wordpress. After making some websites I wanted to code pages from scratch.</br> 
+            &emsp;I started a bootcamp at "SDA" company. Over 251 hours I learned core web development technologies: HTML, CSS and JavaScript. The main asset of the course was learning the React library and TypeScript. We did projects in groups according to the Scrum methodology (with Jira tool) and individually. In order to manage the global state of the application, we learned about the Redux library. The course ended with a block of testing, using Jest, RTL and Cypress.</br> 
+            &emsp;I am currently expanding my knowledge through learning platforms and video tutorials.<br />
+             <a href="https://app.diplomasafe.com/pl-PL/claim/dddf4512eac2f77810f3543af0781b0a896837270/faa2615095cad80b36af77613e14c2b227adfc2a53324c5d0c41c9753ba0ea62?from=email_claim"><button class="button">Certificate</button></a>
             <div class="project-element-stack">
             <i class="fa-brands fa-square-js"></i
             ><i class="fa-brands fa-css3-alt"></i
@@ -81,7 +78,7 @@
           </div>
           </p>
         </div>
-        <figure class="projects-image"></figure>
+        <figure class="projects-image" role="img" aria-label="Coding on computer"></figure>
       </article>
 
       <article class="project-element">
@@ -140,7 +137,7 @@
             </p>
           </div>
         </div>
-        <figure class="contact-image"></figure>
+        <figure class="contact-image" role="img" aria-label="Phone calling"></figure>
       </article>
     </main>
     <script src="./main.js" type="module"></script>
