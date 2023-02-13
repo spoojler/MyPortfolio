@@ -168,7 +168,7 @@ button {
   box-shadow: 0px 0px 34px 16px rgba(19, 14, 104, 0.3);
 }
 
-.project-element-stack {
+.project-stack {
   font-size: 4rem;
   display: flex;
   justify-content: space-evenly;
@@ -195,9 +195,15 @@ button {
 }
 
 .project-element-image.todo {
-  background-image: url(./images/todo_thumbnail.png);
+  background-image: url(./images/todo-thumbnail.png);
   background-size: contain;
   background-color: white;
+}
+
+.project-element-image.employee {
+  background-image: url(./images/employee-thumbnail.jpg);
+  background-color: white;
+  background-size: contain;
 }
 
 .project-element-image.github {
@@ -220,7 +226,7 @@ button {
   height: 400px;
   width: 100%;
   opacity: 0.9;
-  background-image: url('images/about_us.jpg');
+  background-image: url('images/about-us.jpg');
   background-size: cover;
   background-position: left;
 }
