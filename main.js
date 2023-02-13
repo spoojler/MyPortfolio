@@ -1,3 +1,7 @@
+import { initializeApp } from 'firebase/app';
+
+const app = initializeApp();
+
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 
