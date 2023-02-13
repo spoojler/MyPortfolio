@@ -20,7 +20,7 @@ const projectsButton = document.getElementById('projects-button');
 const projectsArticle = document.getElementById('projects-article');
 
 const contactButton = document.getElementById('contact-button');
-const contactArticle = document.getElementById('contact-article');
+const footer = document.getElementById('footer');
 
 aboutMeButton.addEventListener('click', () => {
   burger.classList.remove('active');
@@ -37,7 +37,7 @@ projectsButton.addEventListener('click', () => {
 contactButton.addEventListener('click', () => {
   burger.classList.remove('active');
   menu.classList.remove('active');
-  contactArticle.scrollIntoView();
+  footer.scrollIntoView();
 });
 
 cvButton.addEventListener('click', () => {
