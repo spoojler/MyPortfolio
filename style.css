@@ -252,7 +252,7 @@ button {
 }
 #cv-image.active {
   background-color: white;
-  background-image: url('images/CV_Mateusz_Wójcik.jpg');
+  background-image: url('images/CV_Mateusz_Wójcik.png');
   background-size: contain;
   background-position: center;
   width: 100%;
@@ -260,6 +260,15 @@ button {
   background-repeat: no-repeat;
   justify-self: center;
 }
+
+#download-button {
+  display: none;
+}
+
+#download-button.active {
+  display: block;
+}
+
 .menu.active {
   transform: translateX(0);
 }

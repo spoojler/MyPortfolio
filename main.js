@@ -12,6 +12,7 @@ burger.addEventListener('click', (event) => {
 });
 
 const cvButton = document.getElementById('cv-button');
+const downloadButton = document.getElementById('download-button');
 const cvImage = document.getElementById('cv-image');
 
 const aboutMeButton = document.getElementById('aboutme-button');
@@ -43,9 +44,11 @@ contactButton.addEventListener('click', () => {
 cvButton.addEventListener('click', () => {
   if (cvImage.classList.contains('active')) {
     cvImage.classList.remove('active');
+    downloadButton.classList.remove('active')
     cvButton.innerText = 'Show CV';
   } else {
     cvImage.classList.add('active');
+    downloadButton.classList.add('active');
     cvButton.innerText = 'Hide CV';
   }
 });
