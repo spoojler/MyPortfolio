@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio website - Simcare Mateusz Wójcik</title>
-    <meta name="description" content="I am early stage programmer, looking for new challenges. On this website You can see my projects and contact with me. Mateusz Wójcik">
+    <meta name="description" content="I am early stage programmer, looking for new opportunities. On this website You can see my projects and contact with me. Mateusz Wójcik">
     <meta name="google-site-verification" content="tl-02eczjm2ckh-n5JCggzvw3gpra2WA4RvtQxVjFAg" />
     <link rel="stylesheet" href="./style.css" />
     <link
@@ -13,6 +13,14 @@
       href="https://kit.fontawesome.com/3833e38d1b.css"
       crossorigin="anonymous"
     />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZB4L52P7J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9ZB4L52P7J');
+    </script>
     <script
       src="https://kit.fontawesome.com/3833e38d1b.js"
       crossorigin="anonymous"
@@ -43,7 +51,7 @@
     </header>
     <main>
       <article id="aboutme-article" style="margin-bottom: 0px">
-        <div class="article_text">
+        <div class="article-text">
           <h2>About Me</h2>
           <p>
             &emsp;My name is Mathew but everyone who knows me calls me "Handyman". Rumor has it
@@ -58,29 +66,29 @@
           </p>
           <button class="button" id="cv-button">Show CV</button>
         </div>
-        <figure class="aboutme-image" role="img" aria-label="Man reading business newspaper"></figure>
+        <figure class="aboutme-image" role="img" aria-label="My profile image"></figure>
       </article>
 
-      <article style="border: none"><a href="/images/CV_Mateusz_Wójcik.pdf"><button class="button" id="download-button">Download PDF</button></a><div id="cv-image"></div></article>
+      <article style="border: none"><a href="https://acrobat.adobe.com/link/track?uri=urn:aaid:scds:US:771ef0a3-c43d-42ad-b426-a1a974bb68c1"><button class="button" id="download-button">Open PDF</button></a><div id="cv-image"></div></article>
       
       <article id="projects-article">
-        <div class="article_text">
+        <div class="article-text">
           <h2>Projects</h2>
           <p>
             &emsp;I started my adventure with web technologies by using CMS platforms such as Wordpress. After making some websites I wanted to code pages from scratch.</br> 
             &emsp;I started a bootcamp at "SDA" company. Over 251 hours I learned core web development technologies: HTML, CSS and JavaScript. The main asset of the course was learning the React library and TypeScript. We did projects in groups according to the Scrum methodology (with Jira tool) and individually. In order to manage the global state of the application, we learned about the Redux library. The course ended with a block of testing, using Jest, RTL and Cypress.</br> 
             &emsp;I am currently expanding my knowledge through learning platforms and video tutorials.<br />
-             <a href="https://app.diplomasafe.com/pl-PL/claim/dddf4512eac2f77810f3543af0781b0a896837270/faa2615095cad80b36af77613e14c2b227adfc2a53324c5d0c41c9753ba0ea62?from=email_claim"><button class="button">Certificate</button></a>
-            <div class="project-stack">
+          </p>
+          <button class="button"><a href="https://app.diplomasafe.com/pl-PL/claim/dddf4512eac2f77810f3543af0781b0a896837270/faa2615095cad80b36af77613e14c2b227adfc2a53324c5d0c41c9753ba0ea62?from=email_claim">Certificate</a></button>
+        </div>
+      </article>
+
+<div class="project-stack-wrapper"><div class="project-stack project-stack-animation">
             <i class="fa-brands fa-square-js"></i
             ><i class="fa-brands fa-css3-alt"></i
             ><i class="fa-brands fa-html5"></i
             ><i class="fa-brands fa-react"></i>
-          </div>
-          </p>
-        </div>
-        <figure class="projects-image" role="img" aria-label="Coding on computer"></figure>
-      </article>
+          </div></div>
 
       <article class="project-element">
         <a href="https://woodagram-42477.web.app">
@@ -117,12 +125,12 @@
           </a>
       </article>
 
-      <article id="contact-article">
-        <div class="article_text">
-          <h2>Contact</h2>
-          <div class="contact-element">
+      <article class="contact-article">
+        <div class="article-text">
+          <div><h2>Contact</h2></div>
+          <div class="contact-element-container"><div class="contact-element">
             <i class="fa-solid fa-phone"></i>
-            <p class="semi-hidden-text">Included in CV</p>
+            <p>Included in CV</p>
           </div>
           <div class="contact-element">
             <i class="fa-solid fa-envelope"></i>
@@ -143,11 +151,10 @@
             <p>
               <a href="https://github.com/spoojler">github.com/spoojler</a>
             </p>
-          </div>
+          </div></div>
         </div>
-        <figure class="contact-image" role="img" aria-label="Phone calling"></figure>
       </article>
-      <footer id="footer"></footer>
+      <footer id="footer"><p>Copyright</p><script>document.write(new Date().getFullYear())</script><p>Mateusz Wójcik</p></footer>
     </main>
     <script src="./main.js" type="module"></script>
   </body>

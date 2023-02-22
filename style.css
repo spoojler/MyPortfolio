@@ -7,8 +7,8 @@
   font-family: 'Raleway', sans-serif;
 }
 
-html, body {
-
+html,
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -16,10 +16,11 @@ html, body {
 body {
   position: relative;
   font-size: 16px;
+  background: white;
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -108,10 +109,12 @@ article {
   justify-content: center;
   flex-direction: column-reverse;
   align-items: center;
-  border: 3px solid rgba(136, 0, 255, 0.155);
-  margin: 10px 0px 50px 0px;
+  margin: 1.5rem 0px 0rem 0px;
+  background-color: white;
+  border: 3px solid #ffffff;
 }
-.article_text {
+
+.article-text {
   margin: 10px;
   width: 100%;
   display: flex;
@@ -127,6 +130,11 @@ h2 {
   font-size: 2.5rem;
   font-weight: 400;
   text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+
+article:hover h2 {
+  transform: scale(1.05);
 }
 
 h3 {
@@ -143,8 +151,8 @@ p {
 }
 
 button {
-  background-color: #130e68e2;
-  border: 3px solid rgba(19, 14, 104, 0.888);
+  background-color: #2479f1e2;
+  box-shadow: 0px 8px 10px #1853a574;
   color: white;
   padding: 8px;
   margin: 8px;
@@ -157,6 +165,7 @@ button {
 }
 
 .project-element a {
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,15 +174,40 @@ button {
 
 .project-element:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 34px 16px rgba(19, 14, 104, 0.3);
+  box-shadow: 0px 0px 34px 16px rgba(24, 102, 197, 0.3);
+}
+
+.project-stack-wrapper {
+  width: 100%;
+  margin-top: 3rem;
 }
 
 .project-stack {
-  font-size: 4rem;
+  font-size: 3rem;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(1.2);
 }
+
+footer {
+  display: flex;
+  align-items: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-stack {
+    transition: opacity 1s ease, transform 1.5s ease;
+  }
+}
+
+.project-stack-animation {
+  opacity: 1;
+  transform: none;
+}
+
 .project-element-image {
   background-color: rgba(136, 0, 255, 0.155);
   width: 300px;
@@ -212,47 +246,44 @@ button {
   width: 250px;
 }
 
+.contact-article {
+  padding: 1rem 0 1rem 0;
+  color: white;
+  background-color: #2479f1e2;
+  width: 100vw;
+  border: none;
+}
+
+.contact-article:hover {
+  border: none;
+}
+
+.contact-element-container a {
+  color: white;
+}
+
 .contact-element {
   display: flex;
   font-size: 1.5rem;
   justify-content: center;
   align-items: center;
 }
-.semi-hidden-text {
-  opacity: 0.6;
-}
+
 .aboutme-image {
-  background-color: rgba(136, 0, 255, 0.155);
-  height: 400px;
+  background-color: white;
+  height: 300px;
   width: 100%;
-  opacity: 0.9;
-  background-image: url('images/about-us.jpg');
-  background-size: cover;
-  background-position: left;
-}
-
-.projects-image {
-  background-color: rgba(136, 0, 255, 0.155);
-  height: 400px;
-  width: 100%;
-  background-image: url('images/working-on-computer.jpg');
-  opacity: 0.8;
-  background-size: cover;
-  background-position: left;
-}
-
-.contact-image {
-  background-color: rgba(136, 0, 255, 0.155);
-  height: 400px;
-  width: 100%;
-  background-image: url('images/calling-man.jpg');
-  opacity: 0.8;
-  background-size: cover;
+  opacity: 1;
+  background-image: url('images/profile-whitebg.JPG');
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.386);
 }
+
 #cv-image.active {
   background-color: white;
-  background-image: url('images/CV_Mateusz_Wójcik.png');
+  background-image: url('images/CV_Mateusz_Wójcik.jpg');
   background-size: contain;
   background-position: center;
   width: 100%;
@@ -304,6 +335,7 @@ button {
 }
 .burger.active {
   z-index: 100;
+  box-shadow: none;
 }
 .burger.active > span {
   background: whitesmoke;
@@ -321,11 +353,17 @@ button {
 
 @media only screen and (min-width: 1000px) {
   body {
-    overflow-x:unset;
+    overflow-x: unset;
+  }
+
+  h2 {
+    font-size: 4rem;
   }
 
   header {
     display: flex;
+    box-shadow: 10px 1px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 4rem;
   }
 
   nav {
@@ -335,6 +373,13 @@ button {
   article {
     flex-direction: row;
     width: 75%;
+    margin-top: 3rem;
+  }
+
+  .contact-article .article-text {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .menu {
@@ -385,5 +430,25 @@ button {
 
   #cv-image.active {
     height: 1062px;
+  }
+
+  .project-stack-wrapper {
+    margin: 3rem 0 3rem 0;
+  }
+
+  .aboutme-image {
+    height: 500px;
+  }
+
+  .aboutme-image::after {
+    content: '';
+    background-color: #2479f1e2;
+    transform: rotate(-20deg);
+    width: 50px;
+    height: 80vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-shadow: 10px 50px 15px 5px #0b274f44;
   }
 }

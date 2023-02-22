@@ -44,7 +44,7 @@ contactButton.addEventListener('click', () => {
 cvButton.addEventListener('click', () => {
   if (cvImage.classList.contains('active')) {
     cvImage.classList.remove('active');
-    downloadButton.classList.remove('active')
+    downloadButton.classList.remove('active');
     cvButton.innerText = 'Show CV';
   } else {
     cvImage.classList.add('active');
@@ -52,3 +52,19 @@ cvButton.addEventListener('click', () => {
     cvButton.innerText = 'Hide CV';
   }
 });
+
+const projectStack = document.querySelector('.project-stack');
+projectStack.classList.remove('project-stack-animation');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+
+    if (entry.isIntersecting) {
+      projectStack.classList.add('project-stack-animation');
+      return;
+    }
+    projectStack.classList.remove('project-stack-animation');
+  });
+});
+
+observer.observe(document.querySelector('.project-stack-wrapper'));
